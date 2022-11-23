@@ -1,9 +1,13 @@
 import React from 'react';
 
-export default function TodoItem() {
+export default function TodoItem({ todo, deleteTodo }) {
     return (
         <div>
-            <h2>Todos Item</h2>
+            <hr />
+            <h2>{todo.title}</h2>
+            <p>{todo.desc}</p>
+            <button className="btn btn-sn btn-outline-danger" onClick={() => { deleteTodo(todo) }}>Delete</button>
+            <hr />
         </div>
     )
 }
